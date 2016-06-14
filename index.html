@@ -2,28 +2,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <script type="text/javascript" src="JsCalc.js"></script>
-    <!-- Quick test for pushing -->
+    <link rel="stylesheet" href="Style.css"></link>
+<!-- Quick test for pushing -->
 </head>
 <body>
+<form>
     <h1>Connection string builder</h1>
-    <div class="txtMain">
-        <label id="lblServer" >Server</label>
-        <input id="txtServer" type="text" />
+    <div>
+        <label for="txtServer" >Server</label>
+        <input id="txtServer" type="text" required />
     </div>
-    <div class="txtMain">
-        <label id="lblDatabase">Database</label>
+    <div>
+        <label for="txtDatabase">Database</label>
         <input id="txtDatabase" type="text" />
     </div>
-    <div class="txtMain">
-        <label id="lblUID">UID</label>
+    <div>
+        <label for="txtUID">UID</label>
         <input id="txtUID" type="text" />
     </div>
-    <div class="txtMain">
-        <label id="lblPwd">Password</label>
+    <div>
+        <label for="txtPwd">Password</label>
         <input id="txtPwd" type="text" />
     </div>
-    <div class="btnMain">
-        <input id="btnCreatestring" type="button" value="CreateString" onclick="doFunction();"/>
+    <div>
+        <button id="btnCreatestring" onclick="createString(); return false;">Create string</button>
     </div>
+    <div>
+	<label for="txtString">Output</label>
+	<input id="txtString" type="text"/>
+    </div>
+</form>
 </body>
 </html>
