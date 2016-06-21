@@ -11,11 +11,11 @@ var Password = document.getElementById("txtPwd").value;
 myText = Server+';';
 
 //Needs a better check
-if (Database) { myText = Server+';'+Database+';'; }
-if (UID) { myText = Server+';'+Database+';'+UID+';'; }
-if (Password) { myText = Server+';'+Database+';'+UID+';'+Password+';'; }
+if (!Server) { alert('Please enter at least a server adress'); }
 
-//myText = Server+';'+Database+';';
+if (Database) { myText = myText + Database + ';'; }
+if (UID) { myText = myText + UID + ';'; }
+if (Password) { myText = myText + Password + ';'; }
 
 OutputString.value = myText;
 }
