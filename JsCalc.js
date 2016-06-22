@@ -12,14 +12,16 @@ var StringType = document.getElementById("cboType").value;
 //if (StringType = "MySQL") { alert('MySQL!'); }
 
 //Add diffrent items based on if they're filled or not
-myText = Server+';';
+myText = 'server=' + Server+';';
 
 //Needs a better check
 if (!Server) { alert('Please enter at least a server adress'); return; }
 
-if (Database) { myText = myText + Database + ';'; }
-if (UID) { myText = myText + UID + ';'; }
-if (Password) { myText = myText + Password + ';'; }
+if (Database) { myText = myText + 'database=' +  Database + ';'; }
+if (UID) { myText = myText + 'userid=' + UID + ';'; }
+if (Password) { myText = myText + 'password=' + Password + ';'; }
+
+if (Stringt = "MySQL") { myText = 'connectionString="' + myText + '" providerName="MySql.Data.MySqlClient"' }
 
 OutputString.value = myText;
 }
