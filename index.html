@@ -8,14 +8,14 @@
 <body>
 <form>
     <h1>Connection string builder</h1>
-    <div> 
+    <div>
 	<label for="cboType">String type</label>
 	<select id="cboType">
 		<option>Select an option</option>
 		<option>MySQL (web.config)</option>
 		<option>MSSQL (web.config)</option>
 	</select>
-    </div>	
+    </div>
     <div>
         <label for="txtServer" >Server</label>
         <input id="txtServer" type="text" required />
@@ -32,6 +32,14 @@
         <label for="txtPwd">Password</label>
         <input id="txtPwd" type="text" />
     </div>
+    <div>
+  <label for="cboSSL">Encryption type</label>
+  <select id="cboSSL" onchange="ShowIndex(); return false;">
+    <option>Select an option (blanc omits)</option>
+    <option>Preferred</option>
+    <option>Required</option>
+  </select>
+<div>
     <div>
         <button id="btnCreatestring" onclick="createString(); return false;">Create string</button>
     </div>
